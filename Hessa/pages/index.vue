@@ -487,10 +487,17 @@
 	</section>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { onMounted, ref } from 'vue'
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import { Navigation } from 'swiper/modules'
 
-const marquee = ref(null)
+// Стили swiper
+import 'swiper/css'
+import 'swiper/css/navigation'
+
+// --- Marquee logic ---
+const marquee = ref<HTMLElement | null>(null)
 
 const blockHTML = `
   <div class="flex items-center gap-16 px-8">
@@ -512,11 +519,13 @@ const blockHTML = `
 function fillMarquee() {
 	const containerWidth = window.innerWidth
 	let content = ''
-	let testDiv = document.createElement('div')
+
+	const testDiv = document.createElement('div')
 	testDiv.style.position = 'absolute'
 	testDiv.style.visibility = 'hidden'
 	testDiv.innerHTML = blockHTML
 	document.body.appendChild(testDiv)
+
 	const blockWidth = testDiv.offsetWidth
 	document.body.removeChild(testDiv)
 
@@ -558,11 +567,3 @@ onMounted(() => {
 }
 </style>
 
-<script setup lang="ts">
-import { Swiper, SwiperSlide } from 'swiper/vue'
-import { Navigation } from 'swiper/modules'
-
-// Стили swiper
-import 'swiper/css'
-import 'swiper/css/navigation'
-</script>
