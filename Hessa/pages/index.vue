@@ -1,7 +1,7 @@
 <template>
 	<!-- Hero-секция -->
 	<section
-		class="bg-[url('BG/survey.png')] rounded-3xl p-8 mx-4 my-8 md:mx-auto max-w-[1440px] min-h-[400px] flex flex-col md:flex-row items-stretch justify-between gap-6"
+		class="bg-[url('/BG/survey.png')] rounded-3xl p-8 mx-4 my-8 md:mx-auto max-w-[1440px] min-h-[400px] flex flex-col md:flex-row items-stretch justify-between gap-6"
 	>
 		<!-- Текст -->
 		<div class="text-white max-w-xl flex flex-col justify-center">
@@ -185,7 +185,7 @@
 	<!-- Секция: 3 Этапа контроля для
 безупречного качества -->
 	<section
-		class="w-full bg-[url('BG/3-steps.png')] bg-no-repeat bg-cover bg-center p-8 my-12 flex flex-col-reverse md:flex-row items-center text-white px-4"
+		class="w-full bg-[url('/BG/3-steps.png')] bg-no-repeat bg-cover bg-center p-8 my-12 flex flex-col-reverse md:flex-row items-center text-white px-4"
 	>
 		<!-- Левая часть (картинка) уйдёт вниз на мобилке -->
 		<div class="w-full md:w-1/2 flex justify-center">
@@ -433,7 +433,7 @@
 
 	<!-- Секция подписки -->
 	<section
-		class="relative bg-[url('BG/subscription-bg.png')] bg-cover bg-center rounded-3xl mx-4 my-12 md:mx-auto max-w-[1440px] min-h-[400px] flex items-center justify-center"
+		class="relative bg-[url('/BG/subscription-bg.png')] bg-cover bg-center rounded-3xl mx-4 my-12 md:mx-auto max-w-[1440px] min-h-[400px] flex items-center justify-center"
 	>
 		<!-- Затемняющий слой -->
 		<div class="absolute inset-0 bg-black/10 rounded-3xl"></div>
@@ -566,4 +566,3 @@ onMounted(() => {
 	animation: marquee 60s linear infinite; /* скорость регулируется здесь */
 }
 </style>
-
